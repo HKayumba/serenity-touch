@@ -7,7 +7,7 @@ function Footer() {
   return (
     <>
       <footer className="px-6 md:px-[100px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
           <div>
             <h3 className="pb-4">Serenity Touch</h3>
             <p>

@@ -4,22 +4,20 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
-import { useRouter, usePathname } from "next/navigation";
+import { usePathname } from "next/navigation";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const router = useRouter();
   const pathname = usePathname();
 
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <header className="fixed top-0 w-full glass-strong z-50 border-b border-border/50">
+    <header className="sticky top-0 w-full glass-strong z-50 border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
