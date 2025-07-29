@@ -5,19 +5,16 @@ export const whyUs = [
     id: 1,
     title: "Expert Therapists",
     icon: "6",
-    
   },
   {
     id: 2,
     title: "Personalized Treatments",
     icon: "6",
-   
   },
   {
     id: 3,
     title: "Relaxing Environment",
     icon: "6",
-   
   },
 ];
 
@@ -51,19 +48,54 @@ export const services = [
     title: "Massage Therapy",
     description:
       "Relax and rejuvenate with our expert massage therapy services.",
-    image: "/images/service1.jpg",
+      price: "$80",
+    image: "/images/massage-therapy.jpg",
   },
   {
     id: 2,
     title: "Facial Treatments",
     description: "Indulge in our luxurious facial treatments for glowing skin.",
-    image: "/images/service2.jpg",
+    price: "$100",
+    image: "/images/face-treatment.jpg",
   },
+
   {
     id: 3,
-    title: "Body Scrubs",
+    title: "Aromatherapy",
     description:
-      "Exfoliate and nourish your skin with our invigorating body scrubs.",
-    image: "/images/service3.jpg",
+      "Enhance your well-being with our soothing aromatherapy treatments.",
+    price: "$90",
+    image: "/images/aromatherapy.jpg",
+  },
+  {
+    id: 4,
+    title: "Hot Stone Therapy",
+    description:
+      "Relieve tension and stress with our therapeutic hot stone massages.",
+    price: "$120",
+    image: "/images/hot-stone-therapy.jpg",
+  },
+  {
+    id: 5,
+    title: "Reflexology",
+    description:
+      "Restore balance and harmony with our specialized reflexology treatments.",
+    price: "$70",
+    image: "/images/reflexology.jpg",
+  },
+  {
+    id: 6,
+    title: "Couples Spa",
+    description:
+      "Share a relaxing experience with your loved one in our couples spa.",
+    price: "$200",
+    image: "/images/couples-spa.jpg",
+  },
+  {
+    id: 7,
+    title: "Yoga",
+    description: "Find your inner peace and flexibility with our yoga sessions.",
+    price: "$50",
+    image: "/images/yoga.jpg",
   },
 ];

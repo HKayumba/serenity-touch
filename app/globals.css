@@ -113,6 +113,13 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+:root {
+  --primary: #3E5C4B;
+  --secondary: #D4A5A5;
+  --accent: #B7C2B1;
+  --background: #FAF9F6;
+  --foreground: #A89F91;
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;

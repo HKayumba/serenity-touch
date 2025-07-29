@@ -16,7 +16,14 @@ export default function Home() {
     <>
       {/* This is the main page of the application */}
       {/* HomeHero component displays the main hero section of the homepage */}
-      <HomeHero />
+      <section className="relative h-screen">
+        <div className="absolute inset-0 bg-[url('/images/home.jpg')] bg-cover bg-center opacity-80"></div>
+        <div className="relative z-10">
+          <HomeHero />
+        </div>
+      </section>
+
+      {/* About us section */}
       <section className="px-6 md:px-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-2 py-20 gap-4">
           <div className="pt-10">
@@ -105,7 +112,9 @@ export default function Home() {
                   <CardTitle>
                     <div className="grid grid-cols-1 gap-2">
                       {item.icon}
-                      <span className="text-sm font-semibold">{item.title}</span>
+                      <span className="text-sm font-semibold">
+                        {item.title}
+                      </span>
                     </div>
                   </CardTitle>
                 </Card>
