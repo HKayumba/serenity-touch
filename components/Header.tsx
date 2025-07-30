@@ -17,7 +17,7 @@ function Header() {
   ];
 
   return (
-    <header className="sticky top-0 w-full bg-[var(--primary)] bg-blur  glass-strong z-50 shadow-2xl">
+    <header className="sticky top-0 w-full bg-[var(--accent)] bg-blur  glass-strong z-50 shadow-2xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -42,8 +42,8 @@ function Header() {
                   href={item.href}
                   className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-xl ${
                     pathname === item.href
-                      ? "text-white bg-primary/10"
-                      : "text-foreground hover:text-white hover:bg-primary/5"
+                      ? "text-white bg-primary/50"
+                      : "text-white hover:text-white hover:bg-primary/50"
                   }`}
                 >
                   {item.name}
@@ -52,7 +52,7 @@ function Header() {
                   )}
                 </Link>
               ))}
-              <Button className="btn-spa ml-4 bg-[var(--accent)] text-shadow-amber-50 hover:bg-[var(--background)] hover:text-[var(--primary)] cursor-pointer">
+              <Button className="btn-spa ml-4  text-shadow-amber-50 hover:bg-[var(--background)] hover:text-[var(--primary)] cursor-pointer">
                 <Link href="/">Book Now</Link>
               </Button>
             </div>
@@ -80,7 +80,7 @@ function Header() {
                   className={`block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-xl ${
                     pathname === item.href
                       ? "text-white"
-                      : "text-foreground hover:text-white hover:bg-primary/5"
+                      : "text-white hover:text-white hover:bg-primary/50"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
