@@ -34,7 +34,7 @@ function page() {
           {services.map((item) => (
             <Card
               key={item.id}
-              className="border-l-4 border-l-[var(--primary)] border-b-4 border-b-[var(--primary)] rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="border-l-4 border-l-[var(--primary)] border-b-4 border-b-[var(--primary)] rounded-lg shadow-lg transition-transform hover:scale-105 hover:shadow-xl duration-300"
             >
               <CardHeader>
                 <Image

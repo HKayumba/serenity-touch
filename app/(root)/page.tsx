@@ -18,7 +18,8 @@ import Image from "next/image";
 import { whyUs } from "@/data";
 import { featuredTreatments } from "@/data";
 import { testimonials } from "@/data";
-import { Star } from "lucide-react";
+import { CalendarDays, Clock, PhoneCall, Star } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
       {/* This is the main page of the application */}
       {/* HomeHero component displays the main hero section of the homepage */}
       <section className="relative h-screen">
-        <div className="absolute inset-0 bg-[url('/images/home.jpg')] bg-cover bg-center opacity-80"></div>
+        <div className="absolute inset-0 bg-[url('/images/home.jpg')] bg-cover bg-center"></div>
         <div className="relative z-10">
           <HomeHero />
         </div>
@@ -64,31 +65,76 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="px-6 md:px-[100px]">
-        <div className="grid grid-cols-1 md:grid-cols-3 py-20 gap-8">
-          <div>
-            <Card className="p-4 border border-t-4 border-b-4 border-primary rounded-lg shadow-md ">
-              <CardTitle className="text-2xl font-bold text-primary">
-                Card Title
-              </CardTitle>
-              <CardContent>This is a description of the card.</CardContent>
-            </Card>
-          </div>
-          <div>
-            <Card className="p-4 border border-t-4 border-b-4 border-primary rounded-lg shadow-md">
-              <CardTitle className="text-2xl font-bold text-primary">
-                Card Title
-              </CardTitle>
-              <CardContent>This is a description of the card.</CardContent>
-            </Card>
-          </div>
-          <div>
-            <Card className="p-4 border border-t-4 border-b-4 border-primary rounded-lg shadow-md">
-              <CardTitle className="text-2xl font-bold text-primary">
+
+      {/* --- CTA --- */}
+      <section className="px-6 md:px-[100px] py-10">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 scroll-stagger">
+            {/* Quick Appointment Card */}
+            <div className="bg-white rounded-lg shadow-md p-8 transition-transform hover:scale-105 border-t-4 border-[var(--primary)]">
+              <div className="w-14 h-14 bg-[var(--secondary)] rounded-full flex items-center justify-center mb-5">
+                <CalendarDays className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Quick Appointment
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Want to unwind or refresh today? Book a same-day session with
+                our expert therapists.
+              </p>
+              <Button
+                asChild
+                className="w-full bg-[var(--primary)] hover:bg-[var(--accent)]"
+              >
+                <Link href="/">Book Now</Link>
+              </Button>
+            </div>
+
+            {/* Emergency Care Card */}
+            <div className="bg-white rounded-lg shadow-md p-8 transition-transform hover:scale-105 border-t-4 border-[var(--primary)]">
+              <div className="w-14 h-14 bg-[var(--secondary)] rounded-full flex items-center justify-center mb-5">
+                <PhoneCall className="h-7 w-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                After Hours Care
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Enjoy select treatments after hours. Perfect for busy schedules
+                and evening relaxation. Available by appointment only.
+              </p>
+              <Button
+                asChild
+                className="w-full bg-[var(--primary)] hover:bg-[var(--accent)]"
+              >
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
+
+            {/* Working Hours Card */}
+            <div className="bg-white rounded-lg shadow-md p-8 transition-transform hover:scale-105 border-t-4 border-[var(--primary)]">
+              <div className="w-14 h-14 bg-[var(--secondary)] rounded-full flex items-center justify-center mb-5">
+                <Clock className="h-7 w-7 text-white" />{" "}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Working Hours
-              </CardTitle>
-              <CardContent>This is a description of the card.</CardContent>
-            </Card>
+              </h3>
+              <p className="text-gray-600 mb-6">
+                We&apos;re open: <br />
+                <span className="font-semibold">Monday - Friday</span>: 8:00 AM
+                - 7:00 PM <br />
+                <span className="font-semibold">Saturday & Public Holiday</span>
+                : 8:00 AM - 1:00 PM <br />
+                <span className="font-semibold">Sunday</span>: 10:00 AM - 1:00
+                PM.
+              </p>
+
+              <Button
+                asChild
+                className="w-full bg-[var(--primary)] hover:bg-[var(--accent)]"
+              >
+                <Link href="/contact">View Schedule</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -147,9 +193,12 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {featuredTreatments.map((treatment, index) => (
-              <div className="p-2" key={treatment.id}>
+              <div
+                className="p-2 transition-transform hover:scale-105"
+                key={treatment.id}
+              >
                 <Card
-                  className={`border border-b-4 border-primary rounded-xl shadow-md p-4 ${
+                  className={`border border-b-4 border-primary h-full rounded-xl shadow-md p-4 ${
                     index === 1
                       ? "border-t-30 shadow-2xl"
                       : "border-t-4 shadow-lg"
@@ -207,7 +256,10 @@ export default function Home() {
                           {Array.from(
                             { length: testimonial.rating },
                             (_, i) => (
-                              <Star key={i} className="text-yellow-500 w-5 h-5" />
+                              <Star
+                                key={i}
+                                className="text-yellow-500 w-5 h-5"
+                              />
                             )
                           )}
                         </div>
@@ -259,7 +311,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="p-2 h-full">
+            <div className="p-2 h-full transition-transform hover:scale-105">
               <Card className="border border-t-4 border-b-4 border-primary rounded-lg shadow-md h-full flex flex-col">
                 <CardHeader className="justify-center items-center">
                   <div className="bg-[var(--secondary)] text-white rounded-full py-2 px-6 text-sm font-semibold">
@@ -300,7 +352,7 @@ export default function Home() {
                 </CardFooter>
               </Card>
             </div>
-            <div className="p-2 h-full">
+            <div className="p-2 h-full transition-transform hover:scale-105">
               <Card className="border border-t-4 border-b-4 border-primary rounded-lg shadow-md h-full flex flex-col">
                 <CardHeader className="justify-center items-center">
                   <div className="bg-[var(--secondary)] text-white rounded-full py-2 px-6 text-sm font-semibold">

@@ -82,7 +82,7 @@ function Footer() {
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="p-2 rounded-md border border-gray-300"
+                className="p-2 rounded-md border border-gray-300 placeholder:text-gray-400"
               />
               <Button className="bg-[var(--foreground)] text-white py-2 px-6 rounded-md hover:bg-white hover:text-[var(--primary)] transition-colors duration-300">
                 Subscribe
