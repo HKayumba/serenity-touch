@@ -74,7 +74,7 @@ function page() {
             Our team is ready to answer any questions you might have about our
             services, pricing, or scheduling.
           </p>
-          <Link href="/contact" className="cursor-pointer">
+          <Link href="/contact" scroll={false} className="cursor-pointer">
             <Button
               variant="outline"
               className="border-[var(--primary)] text-[var(--primary)]"

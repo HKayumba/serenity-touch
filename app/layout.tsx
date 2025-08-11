@@ -3,6 +3,9 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SmoothScrollManager from "@/components/SmoothScrollManager";
+import PageTransition from "@/components/PageTransition";
+import ScrollRevealManager from "@/components/ScrollRevealManager";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,8 +30,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable} antialiased`}>
+        <SmoothScrollManager />
+        <ScrollRevealManager />
         <Header />
-        {children}
+        <PageTransition>{children}</PageTransition>
         <Footer />
       </body>
     </html>

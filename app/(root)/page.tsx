@@ -86,7 +86,7 @@ export default function Home() {
                 asChild
                 className="w-full bg-[var(--primary)] hover:bg-[var(--accent)]"
               >
-                <Link href="/">Book Now</Link>
+                <Link href="/" scroll={false}>Book Now</Link>
               </Button>
             </div>
 
@@ -106,7 +106,7 @@ export default function Home() {
                 asChild
                 className="w-full bg-[var(--primary)] hover:bg-[var(--accent)]"
               >
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact" scroll={false}>Contact Us</Link>
               </Button>
             </div>
 
@@ -132,7 +132,7 @@ export default function Home() {
                 asChild
                 className="w-full bg-[var(--primary)] hover:bg-[var(--accent)]"
               >
-                <Link href="/contact">View Schedule</Link>
+                <Link href="/contact" scroll={false}>View Schedule</Link>
               </Button>
             </div>
           </div>

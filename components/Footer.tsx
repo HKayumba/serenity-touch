@@ -19,6 +19,7 @@ function Footer() {
             <div className="flex space-x-4 mt-4">
               <Link
                 href="/"
+                scroll={false}
                 className="bg-[var(--foreground)] rounded-full p-2"
               >
                 <Facebook className="w-5 h-5 text-white" />
@@ -26,12 +27,14 @@ function Footer() {
 
               <Link
                 href="/"
+                scroll={false}
                 className="bg-[var(--foreground)] rounded-full p-2"
               >
                 <Instagram className="w-5 h-5 text-white" />
               </Link>
               <Link
                 href="/"
+                scroll={false}
                 className="bg-[var(--foreground)] rounded-full p-2"
               >
                 <Linkedin className="w-5 h-5 text-white" />
@@ -43,16 +46,16 @@ function Footer() {
               <h4 className="mb-4 text-xl font-semibold">Company</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/">Home</Link>
+                  <Link href="/" scroll={false}>Home</Link>
                 </li>
                 <li>
-                  <Link href="/services">Services</Link>
+                  <Link href="/services" scroll={false}>Services</Link>
                 </li>
                 <li>
-                  <Link href="/">Careers</Link>
+                  <Link href="/" scroll={false}>Careers</Link>
                 </li>
                 <li>
-                  <Link href="/">Press</Link>
+                  <Link href="/" scroll={false}>Press</Link>
                 </li>
               </ul>
             </div>
@@ -60,16 +63,16 @@ function Footer() {
               <h4 className="mb-4 font-semibold text-xl">Support</h4>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/contact">Contact Us</Link>
+                  <Link href="/contact" scroll={false}>Contact Us</Link>
                 </li>
                 <li>
-                  <Link href="/">FAQ</Link>
+                  <Link href="/" scroll={false}>FAQ</Link>
                 </li>
                 <li>
-                  <Link href="/">Booking Policy</Link>
+                  <Link href="/" scroll={false}>Booking Policy</Link>
                 </li>
                 <li>
-                  <Link href="/">Gift Cards</Link>
+                  <Link href="/" scroll={false}>Gift Cards</Link>
                 </li>
               </ul>
             </div>
@@ -98,8 +101,8 @@ function Footer() {
             </p>
           </div>
           <div className="grid grid-cols-2">
-            <Link href="/">Privacy Policy</Link>
-            <Link href="/">Terms of Service</Link>
+            <Link href="/" scroll={false}>Privacy Policy</Link>
+            <Link href="/" scroll={false}>Terms of Service</Link>
           </div>
         </div>
       </footer>

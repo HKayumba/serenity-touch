@@ -17,7 +17,7 @@ function HomeHero() {
           </p>
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <Button>Book Now</Button>
-            <Link href="/services" className="cursor-pointer">
+            <Link href="/services" scroll={false} className="cursor-pointer">
               <Button
                 variant="outline"
                 className="text-[var(--primary)] border-var[(--primary)] hover:bg-[var(--primary)] hover:text-white"

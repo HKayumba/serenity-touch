@@ -23,6 +23,7 @@ function Header() {
           {/* Logo */}
           <Link
             href="/"
+            scroll={false}
             className="flex-shrink-0 flex items-center space-x-3 hover-lift"
           >
             <div className="w-10 h-10 rounded-2xl bg-gradient-primary flex items-center justify-center">
@@ -40,6 +41,7 @@ function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
+                  scroll={false}
                   className={`relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-xl ${
                     pathname === item.href
                       ? "text-white bg-primary/50"
@@ -53,7 +55,7 @@ function Header() {
                 </Link>
               ))}
               <Button className="btn-spa ml-4  text-shadow-amber-50 hover:bg-[var(--background)] hover:text-[var(--primary)] cursor-pointer">
-                <Link href="/">Book Now</Link>
+                <Link href="/" scroll={false}>Book Now</Link>
               </Button>
             </div>
           </div>
@@ -77,6 +79,7 @@ function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
+                  scroll={false}
                   className={`block px-4 py-3 text-base font-semibold transition-all duration-300 rounded-xl ${
                     pathname === item.href
                       ? "text-white"
